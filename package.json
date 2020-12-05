@@ -1,0 +1,15 @@
+{
+  "name": "project",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "@amnrst",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node fuse.js run-dev",
+    "build": "node fuse.js"
+  },
+  "devDependencies": {
+    "fuse-box": "^4.0.0-next.447",
+    "node-sass": "^5.0.0"
+  }
+}
