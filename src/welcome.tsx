@@ -1,6 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/css';
 import CatGuy from './assets/catguy';
+import { Link } from "react-router-dom";
+import { button_style } from './assets/form-styles';
 
 export const BrushBackground = ({ className }) => {
   return <svg viewBox="0 0 366 299" fill="none" className={className}>
@@ -11,7 +13,7 @@ export const BrushBackground = ({ className }) => {
 }
 
 
-export const Login = () => {
+export const Welcome = () => {
   return <div className={style}>
     <BrushBackground className={'brush-background'} />
     <CatGuy className={'cat-guy'} />
@@ -21,7 +23,7 @@ export const Login = () => {
         Follow our tips<br />to achieve success!<br />
         <span>Start trading any instrument.</span>
       </p>
-      <button>START</button>
+      <Link className={button_style} to="/home">START</Link>
     </div>
 
   </div>
@@ -60,15 +62,9 @@ const style = css`
       font-weight: normal;
     }
   }
-  button {
+  a {
     align-self: flex-end;
     margin-right: 20%;
-    padding: 0 2em;;
     margin-bottom: 2em;
-    border: 0;
-    background: linear-gradient(180deg, #370BF0 0%, #F020D8 148%);
-    border-radius: 20px;
-    line-height: 3em;
-    color: white;
   }
 `;

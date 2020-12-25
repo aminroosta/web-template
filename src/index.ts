@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Login } from './login';
 import { injectGlobal } from '@emotion/css';
 // @ts-ignore
 import comic_mono from './assets/comic-mono.ttf';
+import App from './app';
 
 injectGlobal`
 @font-face {
@@ -12,7 +12,9 @@ injectGlobal`
 }
 html {
   --green: #0CF2B4;
-  --purple: #966BE8;
+  --purple: #8013e6;
+  --pink: #F020D8;
+  --blue: #370BF0;
 }
 #root {
   height: 100%;
@@ -30,6 +32,6 @@ a, button {
 `;
 
 render(
-  React.createElement(Login, {}, null),
+  React.createElement(App, {}, null),
   document.querySelector('#root')
 );
